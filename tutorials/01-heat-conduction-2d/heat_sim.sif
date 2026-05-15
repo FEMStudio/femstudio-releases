@@ -1,0 +1,70 @@
+Header
+  CHECK KEYWORDS Warn
+  Mesh DB "." "mesh"
+End
+Simulation
+  Max Output Level = 5
+  Coordinate System = Cartesian
+  Simulation Type = Steady State
+  Steady State Max Iterations = 1
+  Output Intervals = 1
+End
+Constants
+  Stefan Boltzmann = 5.67e-08
+End
+Solver 1
+  Procedure = "HeatSolve" "HeatSolver"
+  Variable = Temperature
+  Stabilize = True
+  Equation = "Heat Equation"
+  Linear System Solver = Iterative
+  Linear System Iterative Method = BiCGStab
+  Linear System Max Iterations = 500
+  Linear System Convergence Tolerance = 1.0e-8
+  Linear System Preconditioning = ILU1
+  Steady State Convergence Tolerance = 1.0e-5
+End
+Solver 2
+  Equation = "Result Output"
+  Procedure = "ResultOutputSolve" "ResultOutputSolver"
+  Output File Name = case
+  Output Format = vtu
+  Save Geometry Ids = Logical True
+  Exec Solver = After Simulation
+End
+Body 1
+  Target Bodies(1) = 1
+  Equation = 1
+  Material = 1
+  Body Force = 1
+  Initial Condition = 1
+End
+
+Equation 1
+  Active Solvers(1) = 1
+  Name = "Heat Equation"
+End
+Material 1
+  Density = Real 7870
+  Heat Conductivity = Real 51.9
+  Heat Capacity = Real 486
+  Youngs Modulus = Real 205000000000
+  Poisson Ratio = Real 0.29
+  Heat Expansion Coefficient = Real 1.17e-05
+  Electric Conductivity = Real 5960000
+  Relative Permeability = Real 100
+  Name = "Steel (AISI 1020)"
+End
+Body Force 1
+End
+Initial Condition 1
+End
+Boundary Condition 1
+  Target Boundaries(1) = 3
+  Temperature = 0
+End
+
+Boundary Condition 2
+  Target Boundaries(1) = 1
+  Temperature = 100
+End
