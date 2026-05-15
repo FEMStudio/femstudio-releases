@@ -6,7 +6,7 @@ README with reproduction steps.
 
 | #  | Topic                                  | Video |
 |----|----------------------------------------|-------|
-| 01 | [Heat conduction on a 2D plate](tutorials/01-heat-conduction-2d)          | [YouTube](…) |
+| 01 | [Heat conduction on a 2D plate](./01-heat-conduction-2d/)          | [YouTube](…) |
 | 02 | Anatomy of a SIF file                  | (planned) |
 | 03 | Mesh generation from scratch           | (planned) |
 | 04 | Cantilever beam: linear elasticity     | (planned)    |
