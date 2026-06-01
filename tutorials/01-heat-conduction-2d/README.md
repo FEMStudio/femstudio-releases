@@ -4,7 +4,7 @@ Steady-state heat conduction on a 1 m × 1 m steel plate. Dirichlet
 boundary conditions on the top and bottom edges; the sides are
 insulated (natural BC).
 
-Video walkthrough: <YouTube link>
+Video walkthrough: https://youtu.be/DGWUpYdniXY
 
 ## Files
 

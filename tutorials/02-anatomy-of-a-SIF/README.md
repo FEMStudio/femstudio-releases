@@ -5,7 +5,7 @@ Reuses that project deliberately — the physics is already familiar,
 so the focus is on what each section of the file means and how the
 sections connect to each other.
 
-Video walkthrough: `TBD`s
+Video walkthrough: https://youtu.be/Zy1-4LNW8oA
 
 ## Files
 
